@@ -7,6 +7,9 @@ import { FooterComponent } from './components/layoutcomponents/footer/footer.com
 import { HeaderComponent } from './components/layoutcomponents/header/header.component';
 import { ContentComponent } from './components/layoutcomponents/content/content.component';
 import { HomeComponent } from './components/home/home.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { FormsModule } from '@angular/forms';
+import { USDtoEgyPipe } from './pipes/usdto-egy.pipe';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { HomeComponent } from './components/home/home.component';
     FooterComponent,
     HeaderComponent,
     ContentComponent,
-    HomeComponent
+    HomeComponent,
+    HighlightDirective,
+    USDtoEgyPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
