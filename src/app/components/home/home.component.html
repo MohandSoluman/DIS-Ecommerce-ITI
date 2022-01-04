@@ -8,3 +8,27 @@
     <li class="font-bold text-gray-700 p-2 text-2xl">{{service}}</li>
 </ul>
 </div>
+property binding test:
+<input type="text" [value]="componyDetails?.name">
+<br>
+<input type="text" [(ngModel)]="componyDetails.name">
+  <hr>
+  <table class="table border-collapse border border-gray-400 table-auto ">
+    <thead>
+      <tr class="border border-gray-700 bg-red-300">
+        <th class="border border-gray-300">No:</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th appHighlight >Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of mainProducts let i= index ">
+        <td >{{i+1}}</td>
+        <td class="text-red-600 font-bold bg-blue-400">{{product.Name}}</td>
+        <td [ngStyle]="{'background-color':product.Quantity>100?'':'red'}">{{product.Quantity}}</td>
+        <td [ngClass]="{'text-indigo-700':(product.price>1000)}">{{product.price | uSDtoEgy: 18.01 | currency :"Egp"}}</td>
+      </tr>
+
+    </tbody>
+  </table>
