@@ -3,4 +3,6 @@ export interface IProduct {
   Name:string;
   Quantity:number;
   price:number;
+  img?:string;
+  CategoryID?:number;
 }

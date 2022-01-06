@@ -10,6 +10,10 @@ import { HomeComponent } from './components/home/home.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { FormsModule } from '@angular/forms';
 import { USDtoEgyPipe } from './pipes/usdto-egy.pipe';
+import { OrderMasterComponent } from './components/Order/order-master/order-master.component';
+import { OrderDetailsComponent } from './components/Order/order-details/order-details.component';
+import { ProductsComponent } from './components/products/products.component';
+import { DefaultImgUrlPipe } from './pipes/default-img-url.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { USDtoEgyPipe } from './pipes/usdto-egy.pipe';
     ContentComponent,
     HomeComponent,
     HighlightDirective,
-    USDtoEgyPipe
+    USDtoEgyPipe,
+    OrderMasterComponent,
+    OrderDetailsComponent,
+    ProductsComponent,
+    DefaultImgUrlPipe
   ],
   imports: [
     BrowserModule,
