@@ -1,0 +1,17 @@
+<h3 class="text-yellow-800 text-5xl p-3 mb-3">Product Order</h3>
+<p class="text-yellow-500 text-3xl">Select Category:</p>
+<br>
+<div class="col-sm-2">
+<select #vch class="form-select" [(ngModel)]="catID">
+  <option *ngFor="let cat of categoryList" [value]="cat.ID">{{cat.Name}}</option>
+</select>
+</div>
+<p class="text-red-400 text-2xl">Total Price : {{totalPrice}}</p>
+<br>
+<h3 class="text-2xl text-pink-800">Products</h3>
+<div>
+<app-order-details [selectedID]="catID" (updatedPrice)="changedPrice($event)"></app-order-details>
+</div>
+<br>
+
+

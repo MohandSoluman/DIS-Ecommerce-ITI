@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ComponyInfo } from 'src/app/shared/compony-info';
-import { IProduct } from 'src/app/viewModel/iproduct';
+import { IProduct } from 'src/app/shared/iproduct';
 
 @Component({
   selector: 'app-home',
